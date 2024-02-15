@@ -4,9 +4,6 @@ import Project1 from "./assets/project1.png";
 import Project2 from "./assets/project2.png";
 import Project3 from "./assets/project3.png";
 import Project4 from "./assets/project4.png";
-import Facebook from "./assets/facebook.svg";
-import LinkedIn from "./assets/linkedin.svg";
-import Instagram from "./assets/instagram.svg";
 import ArrowDown from "./assets/arrow-down.svg";
 import { useEffect, useState } from "react";
 
@@ -15,22 +12,27 @@ function App() {
 
   const onPageScroll = () => {
     if (window.pageYOffset > 200) {
-      setScrolling(true)
+      setScrolling(true);
     } else {
       setScrolling(false);
     }
-  }
+  };
 
   useEffect(() => {
-    window.addEventListener("scroll", onPageScroll)
+    window.addEventListener("scroll", onPageScroll);
     return () => {
-      window.removeEventListener("scroll", onPageScroll)
-    }
-  }, [])
+      window.removeEventListener("scroll", onPageScroll);
+    };
+  }, []);
 
   return (
     <div className="max-w-5xl m-auto relative">
-      <header className={`${scrolling ? 'border-b border-gray-900' : ''}  fixed left-0 right-0 top-0 z-20`} id="home">
+      <header
+        className={`${
+          scrolling ? "border-b border-gray-900" : ""
+        }  fixed left-0 right-0 top-0 z-20`}
+        id="home"
+      >
         <div className="container m-auto  px-4 py-6 max-w-5xl bg-black ">
           <div className="flex flex-col gap-4 sm:flex-row justify-between items-center">
             <div>
@@ -39,22 +41,34 @@ function App() {
             <div>
               <ul className="flex gap-5">
                 <li>
-                  <a href="#projects" className="text-gray-400 hover:text-white cursor-pointer">
+                  <a
+                    href="#projects"
+                    className="text-gray-400 hover:text-white cursor-pointer"
+                  >
                     Projects
                   </a>
                 </li>
                 <li>
-                  <a href="#technologies" className="text-gray-400 hover:text-white cursor-pointer">
+                  <a
+                    href="#technologies"
+                    className="text-gray-400 hover:text-white cursor-pointer"
+                  >
                     Skills
                   </a>
                 </li>
                 <li>
-                  <a href="#aboutme" className="text-gray-400 hover:text-white cursor-pointer">
+                  <a
+                    href="#aboutme"
+                    className="text-gray-400 hover:text-white cursor-pointer"
+                  >
                     About
                   </a>
                 </li>
                 <li>
-                  <a href="#contact" className="text-gray-400 hover:text-white cursor-pointer">
+                  <a
+                    href="#contact"
+                    className="text-gray-400 hover:text-white cursor-pointer"
+                  >
                     Contact
                   </a>
                 </li>
@@ -63,28 +77,77 @@ function App() {
           </div>
         </div>
       </header>
-      <main className="relative mt-28">
+      <main className="relative mt-28 ">
         {/* Intro/Banner section */}
         <section>
           <div className="container  px-4 pt-12 pb-12 sm:pt-20 flex flex-col sm:flex-row gap-6 text-center sm:text-left  ">
             <div>
               <h2 className="font-bold text-4xl">Hello, I'm Vikash Burman</h2>
               <div>
-                <h2 className="font-bold text-4xl mt-1 gradiant-text">Frontend developer</h2>
+                <h2 className="font-bold text-4xl mt-1 gradiant-text">
+                  Frontend developer
+                </h2>
               </div>
               <div>
                 <p className="mt-4 text-gray-400  ">
-                  Dedicated Web Enthusiast with a flair for Design and a love for Coding.
-                  I enjoy bringing ideas to life through clean and effective web development.
+                  Dedicated Web Enthusiast with a flair for Design and a love
+                  for Coding. I enjoy bringing ideas to life through clean and
+                  effective web development.
                 </p>
-                <button className="px-8 shadow-gray-500 shadow-md py-5 mt-5 bg-gradient-to-t from-blue-500 rounded-full to-cyan-500 hover:from-blue-700 hover:to-cyan-700">
-                  Download resume
-                </button>
+                <div className=" flex items-center">
+                  <button className="px-8 shadow-gray-500 shadow-md py-5 mt-5 bg-gradient-to-t from-blue-500 rounded-full to-cyan-500 hover:from-blue-700 hover:to-cyan-700">
+                    <a href="Vikash_Resume.pdf" download={true}>
+                      Download resume
+                    </a>
+                  </button>
+                  <div>
+                    <ul className="flex gap-4">
+                      <li>
+                        <a href="https://github.com/VikashBurman">
+                          <svg
+                            class="w-8 h-8  text-white bg-gradient-to-t from-blue-500 rounded-full to-cyan-500 hover:from-blue-700 hover:to-cyan-700 "
+                            aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M12 2c-2.4 0-4.7.9-6.5 2.4a10.5 10.5 0 0 0-2 13.1A10 10 0 0 0 8.7 22c.5 0 .7-.2.7-.5v-2c-2.8.7-3.4-1.1-3.4-1.1-.1-.6-.5-1.2-1-1.5-1-.7 0-.7 0-.7a2 2 0 0 1 1.5 1.1 2.2 2.2 0 0 0 1.3 1 2 2 0 0 0 1.6-.1c0-.6.3-1 .7-1.4-2.2-.3-4.6-1.2-4.6-5 0-1.1.4-2 1-2.8a4 4 0 0 1 .2-2.7s.8-.3 2.7 1c1.6-.5 3.4-.5 5 0 2-1.3 2.8-1 2.8-1 .3.8.4 1.8 0 2.7a4 4 0 0 1 1 2.7c0 4-2.3 4.8-4.5 5a2.5 2.5 0 0 1 .7 2v2.8c0 .3.2.6.7.5a10 10 0 0 0 5.4-4.4 10.5 10.5 0 0 0-2.1-13.2A9.8 9.8 0 0 0 12 2Z"
+                              clip-rule="evenodd"
+                            />
+                          </svg>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://www.linkedin.com/in/vikash-burman-33517824a/">
+                          <svg
+                            class="w-8 h-8 text-white bg-gradient-to-t from-blue-500 rounded-full to-cyan-500 hover:from-blue-700 hover:to-cyan-700"
+                            aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M12.5 8.8v1.7a3.7 3.7 0 0 1 3.3-1.7c3.5 0 4.2 2.2 4.2 5v5.7h-3.2v-5c0-1.3-.2-2.8-2.1-2.8-1.9 0-2.2 1.3-2.2 2.6v5.2H9.3V8.8h3.2ZM7.2 6.1a1.6 1.6 0 0 1-2 1.6 1.6 1.6 0 0 1-1-2.2A1.6 1.6 0 0 1 6.6 5c.3.3.5.7.5 1.1Z"
+                              clip-rule="evenodd"
+                            />
+                            <path d="M7.2 8.8H4v10.7h3.2V8.8Z" />
+                          </svg>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
             <div className="relative">
               {/* <div className="after:bg-[url('./large-long.png')] after:bg-contain after:block after:bg-no-repeat after:w-[420px] after:h-[320px] after:absolute after:top-0 after:-left-20 sm:after:-left-40 before:bg-[url('./small.png')] before:bg-contain before:block before:bg-no-repeat before:w-[220px] before:h-[220px] before:absolute before:bottom-0 before:-right-10"> */}
-              <img src={Porfile} className="relative z-10 w-[280px] m-auto sm:w-[500px] rounded-full   " />
+              <img
+                src={Porfile}
+                className="relative z-10 w-[280px] m-auto sm:w-[500px] rounded-full   "
+              />
               {/* </div> */}
             </div>
           </div>
@@ -192,9 +255,7 @@ function App() {
               </div>
               <div className="mt-8">
                 <div className="flex justify-between items-center">
-                  <h2 className="font-semibold">
-                    JavaScript
-                  </h2>
+                  <h2 className="font-semibold">JavaScript</h2>
                   <p className="text-gray-500">Intermediate</p>
                 </div>
                 <span className="w-[70%] h-2 mt-2 bg-gradient-to-t from-blue-500 to-cyan-500 block rounded-md" />
@@ -283,30 +344,18 @@ function App() {
             <div className="mt-12 relative before:absolute before:top-0 before:left-16 before:rounded-full before:bottom-10 sm:before:bottom-2 before:w-1 before:bg-white">
               <div className="pl-24 relative before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:absolute before:rounded-full before:left-[58px]">
                 <h3 className="absolute left-0 text-lg font-semibold">2025</h3>
-                <p>
-                  Master of Computer Application (MCA)
-                </p>
-                <p>
-                  NIT Jamshedpur, Jharkhand
-                </p>
+                <p>Master of Computer Application (MCA)</p>
+                <p>NIT Jamshedpur, Jharkhand</p>
               </div>
               <div className="pl-24 mt-24 relative before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:absolute before:rounded-full before:left-[58px]">
                 <h3 className="absolute left-0 text-lg font-semibold">2021</h3>
-                <p>
-                  Bachelor of Computer Application(BCA)
-                </p>
-                <p>
-                  Kurukshetra University, Kurukshetra
-                </p>
+                <p>Bachelor of Computer Application(BCA)</p>
+                <p>Kurukshetra University, Kurukshetra</p>
               </div>
               <div className="pl-24 mt-24 relative before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:absolute before:rounded-full before:left-[58px]">
                 <h3 className="absolute left-0 text-lg font-semibold">2018</h3>
-                <p>
-                Higher Secondary Education(12th)
-                </p>
-                <p>
-                SMB Gita Sr. Sec. School
-                </p>
+                <p>Higher Secondary Education(12th)</p>
+                <p>SMB Gita Sr. Sec. School</p>
               </div>
               {/* <div className="pl-24 mt-24 relative before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:absolute before:rounded-full before:left-[58px]">
                 <h3 className="absolute left-0 text-lg font-semibold">2015</h3>
@@ -322,36 +371,55 @@ function App() {
       <footer id="contact">
         <div className="container mt-20 flex items-center justify-center px-4 py-6 ">
           <div class="py-8 lg:py-4 px-4 mx-auto max-w-screen-sm border border-white rounded-lg ">
-            <h2 class="mb-3 text-3xl tracking-tight font-normal text-center">Contact Me</h2>
-            <p class="mb-8 lg:mb-8 font-light text-center sm:text-xl">Please contact me at vikasburman37@gmail.com or through this form.</p>
+            <h2 class="mb-3 text-3xl tracking-tight font-normal text-center">
+              Contact Me
+            </h2>
+            <p class="mb-8 lg:mb-8 font-light text-center sm:text-xl">
+              Please contact me at vikasburman37@gmail.com or through this form.
+            </p>
             <form action="#" class="space-y-8">
               <div>
                 {/* <label for="email" class="block mb-2 text-sm font-medium">Your email</label> */}
-                <input type="email" id="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Your Email " required />
+                <input
+                  type="email"
+                  id="email"
+                  class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+                  placeholder="Your Email "
+                  required
+                />
               </div>
               <div class="sm:col-span-2">
                 {/* <label for="message" class="block mb-2 text-sm font-medium ">Your message</label> */}
-                <textarea id="message" rows="6" class="block p-2.5 w-full text-sm text-gray-900 rounded-lg border focus:ring-blue-500 focus:border-blue-500 " placeholder="Your Message"></textarea>
+                <textarea
+                  id="message"
+                  rows="6"
+                  class="block p-2.5 w-full text-sm text-gray-900 rounded-lg border focus:ring-blue-500 focus:border-blue-500 "
+                  placeholder="Your Message"
+                ></textarea>
               </div>
               <button className="flex-1 text-sm py-3 px-7 bg-gradient-to-t from-blue-500 rounded-full to-cyan-500 hover:from-blue-700 hover:to-cyan-700">
-                    Send Message
+                Send Message
               </button>
             </form>
           </div>
         </div>
         <div>
-          <p className="text-gray-300 text-sm text-center mt-10 mb-5"> @2024 VikashBurman. All rights reserved.</p>
+          <p className="text-gray-300 text-sm text-center mt-10 mb-5">
+            {" "}
+            @2024 VikashBurman. All rights reserved.
+          </p>
         </div>
       </footer>
-      {
-        scrolling && (
-          <button className="fixed block right-8 bottom-0 w-24" onClick={() => {
+      {scrolling && (
+        <button
+          className="fixed block right-8 bottom-0 w-24"
+          onClick={() => {
             window.scrollTo(0, 0);
-          }}>
-            <img src={ArrowDown} />
-          </button>
-        )
-      }
+          }}
+        >
+          <img src={ArrowDown} />
+        </button>
+      )}
     </div>
   );
 }
