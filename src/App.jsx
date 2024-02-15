@@ -7,6 +7,8 @@ import Project4 from "./assets/project4.png";
 import ArrowDown from "./assets/arrow-down.svg";
 import { useEffect, useState } from "react";
 
+import MyResume from "../Vikash_Resume.pdf";
+
 function App() {
   const [scrolling, setScrolling] = useState(false);
 
@@ -88,24 +90,33 @@ function App() {
                   Frontend developer
                 </h2>
               </div>
-              <div>
+              <div className=" w-[80%]">
                 <p className="mt-4 text-gray-400  ">
                   Dedicated Web Enthusiast with a flair for Design and a love
                   for Coding. I enjoy bringing ideas to life through clean and
                   effective web development.
                 </p>
-                <div className=" flex items-center">
-                  <button className="px-8 shadow-gray-500 shadow-md py-5 mt-5 bg-gradient-to-t from-blue-500 rounded-full to-cyan-500 hover:from-blue-700 hover:to-cyan-700">
-                    <a href="Vikash_Resume.pdf" download={true}>
+                <div className=" flex items-center  mt-5">
+                  <button className="px-4 shadow-gray-500 shadow-md py-4 bg-gradient-to-t from-blue-500 rounded-full to-cyan-500 hover:from-blue-700 hover:to-cyan-700">
+                    <a
+                      href={MyResume}
+                      download="Vikash_Resume.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       Download resume
                     </a>
                   </button>
-                  <div>
-                    <ul className="flex gap-4">
-                      <li>
-                        <a href="https://github.com/VikashBurman">
+
+                  <div className="ml-6">
+                    <ul className="flex gap-4 ">
+                      <li className="">
+                        <a
+                          href="https://github.com/VikashBurman"
+                          target="_blank"
+                        >
                           <svg
-                            class="w-8 h-8  text-white bg-gradient-to-t from-blue-500 rounded-full to-cyan-500 hover:from-blue-700 hover:to-cyan-700 "
+                            class="w-9 h-9  text-white bg-gradient-to-t from-blue-500 rounded-full to-cyan-500  hover:from-blue-700 hover:to-cyan-700 "
                             aria-hidden="true"
                             xmlns="http://www.w3.org/2000/svg"
                             fill="currentColor"
@@ -120,9 +131,12 @@ function App() {
                         </a>
                       </li>
                       <li>
-                        <a href="https://www.linkedin.com/in/vikash-burman-33517824a/">
+                        <a
+                          href="https://www.linkedin.com/in/vikash-burman-33517824a/"
+                          target="_blank"
+                        >
                           <svg
-                            class="w-8 h-8 text-white bg-gradient-to-t from-blue-500 rounded-full to-cyan-500 hover:from-blue-700 hover:to-cyan-700"
+                            class="w-9 h-9 text-white bg-gradient-to-t from-blue-500 rounded-full to-cyan-500 hover:from-blue-700 hover:to-cyan-700"
                             aria-hidden="true"
                             xmlns="http://www.w3.org/2000/svg"
                             fill="currentColor"
@@ -159,12 +173,11 @@ function App() {
             <div className="flex flex-col sm:flex-row gap-10 mt-11">
               <div className="border border-gray-500 rounded-md p-5 flex-1">
                 <img src={Project1} className="w-full h-auto" />
-                <h3 className="text-2xl font-semibold mt-8">
-                  Furniture store landing page
-                </h3>
+                <h3 className="text-2xl font-semibold mt-8">MockMasters</h3>
                 <p className="text-gray-400 text-sm mt-2">
-                  Responsive HTML/CSS layout for online furniture store. HTML5,
-                  CSS3 (SCSS)
+                  Developed Mockmasters with MongoDB, Express.js, React, and
+                  Node.js, incorporating additional technologies for a
+                  well-rounded MERN stack application.
                 </p>
                 <div className="flex mt-12 gap-2">
                   <button className="flex-1 text-sm py-3 bg-gradient-to-t from-blue-500 rounded-full to-cyan-500 hover:from-blue-700 hover:to-cyan-700">
@@ -176,58 +189,81 @@ function App() {
                 </div>
               </div>
               <div className="border border-gray-500 rounded-md p-5 flex-1">
-                <img src={Project2} className="w-full h-auto" />
+                <img src={Project3} className="w-full h-auto" />
                 <h3 className="text-2xl font-semibold mt-8">
-                  Designer furniture store landing page
+                  Food Ordering App
                 </h3>
                 <p className="text-gray-400 text-sm mt-2">
-                  Responsive HTML/CSS layout for online store of designer
-                  furniture. HTML5, CSS3 (SCSS)
+                  Developed a React-based food ordering app with Firebase
+                  backend, CSS styling, and JavaScript functionality, ensuring a
+                  dynamic and user-friendly experience.
                 </p>
-                <div className="flex gap-2 mt-12">
+                <div className="flex gap-4 mt-12">
                   <button className="flex-1 text-sm py-3 bg-gradient-to-t from-blue-500 rounded-full to-cyan-500 hover:from-blue-700 hover:to-cyan-700">
-                    Live preview
+                    <a
+                      href="https://react-food-app-omega.vercel.app/"
+                      target="_blank"
+                    >
+                      Live preview
+                    </a>
                   </button>
+
                   <button className="flex-1 text-sm py-3 border rounded-full hover:border-blue-500 hover:text-blue-500">
-                    Checkout github
+                    <a
+                      href="https://github.com/VikashBurman/React-Food-App"
+                      target="_blank"
+                    >
+                      Checkout github
+                    </a>
                   </button>
                 </div>
               </div>
             </div>
             <div className="flex flex-col sm:flex-row  gap-10 mt-11">
               <div className="border border-gray-500 rounded-md p-5 flex-1">
-                <img src={Project3} className="w-full h-auto" />
-                <h3 className="text-2xl font-semibold mt-8">
-                  Landing page for front-end developer
-                </h3>
+                <img src={Project2} className="w-full h-auto" />
+                <h3 className="text-2xl font-semibold mt-8">ShaliniVirtual</h3>
                 <p className="text-gray-400 text-sm mt-2">
-                  Responsive HTML/CSS layout for landing page for front-end
-                  developer. HTML5, CSS3 (SCSS)
-                </p>
-                <div className="flex gap-4 mt-12">
-                  <button className="flex-1 text-sm py-3 bg-gradient-to-t from-blue-500 rounded-full to-cyan-500 hover:from-blue-700 hover:to-cyan-700">
-                    Live preview
-                  </button>
-                  <button className="flex-1 text-sm py-3 border rounded-full hover:border-blue-500 hover:text-blue-500">
-                    Checkout github
-                  </button>
-                </div>
-              </div>
-              <div className="border border-gray-500 rounded-md p-5 flex-1">
-                <img src={Project4} className="w-full h-auto" />
-                <h3 className="text-2xl font-semibold mt-8">
-                  Website redesign for The Venus project
-                </h3>
-                <p className="text-gray-400 text-sm mt-2">
-                  Responsive HTML/CSS layout for The Venus project. HTML5, CSS3
-                  (SCSS)
+                  Designed and built ShaliniVirtuals with a dynamic
+                  React-powered front-end and an aesthetically pleasing user
+                  interface achieved through Tailwind CSS, elevating the overall
+                  user experience.
                 </p>
                 <div className="flex gap-2 mt-12">
                   <button className="flex-1 text-sm py-3 bg-gradient-to-t from-blue-500 rounded-full to-cyan-500 hover:from-blue-700 hover:to-cyan-700">
-                    Live preview
+                    <a href="https://shalini-v.vercel.app/" target="_blank">
+                      Live preview
+                    </a>
                   </button>
                   <button className="flex-1 text-sm py-3 border rounded-full hover:border-blue-500 hover:text-blue-500">
-                    Checkout github
+                    <a
+                      href="https://github.com/VikashBurman/shaliniV"
+                      target="_blank"
+                    >
+                      Checkout github
+                    </a>
+                  </button>
+                </div>
+              </div>
+
+              <div className="border border-gray-500 rounded-md p-5 flex-1">
+                <img src={Project4} className="w-full h-auto " />
+                <h3 className="text-2xl font-semibold mt-8">
+                  Quiz-App
+                </h3>
+                <p className="text-gray-400 text-sm mt-2">
+                Created a responsive quiz app with HTML, CSS, and JavaScript, ensuring dynamic content loading, scoring functionality, and an intuitive user interface.
+                </p>
+                <div className="flex gap-2 mt-12">
+                  <button className="flex-1 text-sm py-3 bg-gradient-to-t from-blue-500 rounded-full to-cyan-500 hover:from-blue-700 hover:to-cyan-700">
+                  <a href="https://quzify.netlify.app/" target="_blank">
+                      Live preview
+                    </a>
+                  </button>
+                  <button className="flex-1 text-sm py-3 border rounded-full hover:border-blue-500 hover:text-blue-500">
+                  <a href="https://github.com/VikashBurman/Quiz-App" target="_blank">
+                     Checkout github
+                    </a>
                   </button>
                 </div>
               </div>
