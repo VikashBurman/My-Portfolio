@@ -116,7 +116,7 @@ function App() {
                           target="_blank"
                         >
                           <svg
-                            class="w-9 h-9  text-white bg-gradient-to-t from-blue-500 rounded-full to-cyan-500  hover:from-blue-700 hover:to-cyan-700 "
+                            classame="w-9 h-9  text-white bg-gradient-to-t from-blue-500 rounded-full to-cyan-500  hover:from-blue-700 hover:to-cyan-700 "
                             aria-hidden="true"
                             xmlns="http://www.w3.org/2000/svg"
                             fill="currentColor"
@@ -136,7 +136,7 @@ function App() {
                           target="_blank"
                         >
                           <svg
-                            class="w-9 h-9 text-white bg-gradient-to-t from-blue-500 rounded-full to-cyan-500 hover:from-blue-700 hover:to-cyan-700"
+                            classame="w-9 h-9 text-white bg-gradient-to-t from-blue-500 rounded-full to-cyan-500 hover:from-blue-700 hover:to-cyan-700"
                             aria-hidden="true"
                             xmlns="http://www.w3.org/2000/svg"
                             fill="currentColor"
@@ -406,30 +406,30 @@ function App() {
       </main>
       <footer id="contact">
         <div className="container mt-20 flex items-center justify-center px-4 py-6 ">
-          <div class="py-8 lg:py-4 px-4 mx-auto max-w-screen-sm border border-white rounded-lg ">
-            <h2 class="mb-3 text-3xl tracking-tight font-normal text-center">
+          <div classame="py-8 lg:py-4 px-4 mx-auto max-w-screen-sm border border-white rounded-lg ">
+            <h2 classame="mb-3 text-3xl tracking-tight font-normal text-center">
               Contact Me
             </h2>
-            <p class="mb-8 lg:mb-8 font-light text-center sm:text-xl">
+            <p classame="mb-8 lg:mb-8 font-light text-center sm:text-xl">
               Please contact me at vikasburman37@gmail.com or through this form.
             </p>
-            <form action="#" class="space-y-8">
+            <form action="#" classame="space-y-8">
               <div>
-                {/* <label for="email" class="block mb-2 text-sm font-medium">Your email</label> */}
+                {/* <label for="email" classame="block mb-2 text-sm font-medium">Your email</label> */}
                 <input
                   type="email"
                   id="email"
-                  class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+                  classame="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 "
                   placeholder="Your Email "
                   required
                 />
               </div>
-              <div class="sm:col-span-2">
-                {/* <label for="message" class="block mb-2 text-sm font-medium ">Your message</label> */}
+              <div classame="sm:col-span-2">
+                {/* <label for="message" classame="block mb-2 text-sm font-medium ">Your message</label> */}
                 <textarea
                   id="message"
                   rows="6"
-                  class="block p-2.5 w-full text-sm text-gray-900 rounded-lg border focus:ring-blue-500 focus:border-blue-500 "
+                  classame="block p-2.5 w-full text-sm text-gray-900 rounded-lg border focus:ring-blue-500 focus:border-blue-500 "
                   placeholder="Your Message"
                 ></textarea>
               </div>
