@@ -87,7 +87,7 @@ function App() {
               <h2 className="font-bold text-4xl">Hello, I'm Vikash Burman</h2>
               <div>
                 <h2 className="font-bold text-4xl mt-1 gradiant-text">
-                  Frontend developer
+                  MERN Stack Developer
                 </h2>
               </div>
               <div className=" w-[80%]">
