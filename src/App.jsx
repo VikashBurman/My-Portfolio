@@ -35,7 +35,7 @@ function App() {
         }  fixed left-0 right-0 top-0 z-20`}
         id="home"
       >
-        <div className="container m-auto  px-4 py-6 max-w-5xl bg-black ">
+        <div className="container m-auto  px-4 py-6 max-w-5xl bg-black\ ">
           <div className="flex flex-col gap-4 sm:flex-row justify-between items-center">
             <div>
               <h1 className="font-bold text-2xl">Vikash Burman</h1>
