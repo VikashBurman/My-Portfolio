@@ -6,7 +6,6 @@ import Project3 from "./assets/project3.png";
 import Project4 from "./assets/project4.png";
 import ArrowDown from "./assets/arrow-down.svg";
 import { useEffect, useState } from "react";
-
 import MyResume from "../Vikash_Resume.pdf";
 
 function App() {
@@ -31,8 +30,8 @@ function App() {
     <div className="max-w-5xl m-auto relative">
       <header
         className={`${
-          scrolling ? "border-b border-gray-900" : ""
-        }  fixed left-0 right-0 top-0 z-20`}
+          scrolling ? "border-b border-gray-900 bg-black " : ""
+        }  fixed left-0 right-0 top-0 z-20 bg-black`}
         id="home"
       >
         <div className="container m-auto  px-4 py-6 max-w-5xl bg-black\ ">
@@ -60,7 +59,7 @@ function App() {
                 </li>
                 <li>
                   <a
-                    href="#aboutme"
+                    href="#about"
                     className="text-gray-400 hover:text-white cursor-pointer"
                   >
                     About
@@ -85,16 +84,15 @@ function App() {
           <div className="container  px-4 pt-12 pb-12 sm:pt-20 flex flex-col sm:flex-row gap-6 text-center sm:text-left  ">
             <div>
               <h2 className="font-bold text-4xl">Hello, I'm Vikash Burman</h2>
-              <div>
-                <h2 className="font-bold text-4xl mt-1 gradiant-text">
+              <div className="w-max">
+                <h2 className="font-bold text-3xl mt-1 gradiant-text">
                   MERN Stack Developer
                 </h2>
               </div>
               <div className=" w-[80%]">
                 <p className="mt-4 text-gray-400  ">
                   Dedicated Web Enthusiast with a flair for Design and a love
-                  for Coding. I enjoy bringing ideas to life through clean and
-                  effective web development.
+                  for Coding. Creative problem solver eager to contribute to dynamic projects and collaborative teams.
                 </p>
                 <div className=" flex items-center  mt-5">
                   <button className="px-4 shadow-gray-500 shadow-md py-4 bg-gradient-to-t from-blue-500 rounded-full to-cyan-500 hover:from-blue-700 hover:to-cyan-700">
@@ -374,7 +372,7 @@ function App() {
             </div>
           </div>
         </section>
-        <section className="py-8" id="aboutme">
+        <section className="py-8" id="about">
           <div className="container m-auto px-4 space-y-10">
             <h2 className="text-2xl font-semibold">Education</h2>
             <div className="mt-12 relative before:absolute before:top-0 before:left-16 before:rounded-full before:bottom-10 sm:before:bottom-2 before:w-1 before:bg-white">
