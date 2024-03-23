@@ -178,11 +178,22 @@ function App() {
                   well-rounded MERN stack application.
                 </p>
                 <div className="flex mt-12 gap-2">
+                
                   <button className="flex-1 text-sm py-3 bg-gradient-to-t from-blue-500 rounded-full to-cyan-500 hover:from-blue-700 hover:to-cyan-700">
-                    Live preview
+                  <a
+                      href="https://www.mockmasters.live/"
+                      target="_blank"
+                    >
+                      Live preview
+                    </a>
                   </button>
                   <button className="flex-1 text-sm py-3 border rounded-full hover:border-blue-500 hover:text-blue-500">
-                    Checkout github
+                  <a
+                      href="https://github.com/VikashBurman/MockMasters-Frontend/tree/main"
+                      target="_blank"
+                    >
+                      Checkout github
+                    </a>
                   </button>
                 </div>
               </div>
