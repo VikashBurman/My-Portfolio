@@ -6,7 +6,6 @@ import Project3 from "./assets/project3.png";
 import Project4 from "./assets/project4.png";
 import ArrowDown from "./assets/arrow-down.svg";
 import { useEffect, useState } from "react";
-import MyResume from "../Vikash_Resume.pdf";
 
 function App() {
   const [scrolling, setScrolling] = useState(false);
@@ -97,10 +96,8 @@ function App() {
                 <div className=" flex items-center  mt-5">
                   <button className="px-4 shadow-gray-500 shadow-md py-4 bg-gradient-to-t from-blue-500 rounded-full to-cyan-500 hover:from-blue-700 hover:to-cyan-700">
                     <a
-                      href={MyResume}
-                      download="Vikash_Resume.pdf"
+                      href="https://drive.google.com/file/d/1YLb2V_R5xmeP_ibQQIjE6cPYQj2h4H4q/view?usp=sharing"
                       target="_blank"
-                      rel="noopener noreferrer"
                     >
                       Download resume
                     </a>
@@ -170,7 +167,7 @@ function App() {
             <h2 className="text-2xl font-semibold">Projects</h2>
             <div className="flex flex-col sm:flex-row gap-10 mt-11">
               <div className="border border-gray-500 rounded-md p-5 flex-1">
-                <img src={Project1} className="w-full h-auto" />
+                <img src={Project1} className="w-full h-[13rem]" />
                 <h3 className="text-2xl font-semibold mt-8">MockMasters</h3>
                 <p className="text-gray-400 text-sm mt-2">
                   Developed Mockmasters with MongoDB, Express.js, React, and
@@ -198,7 +195,7 @@ function App() {
                 </div>
               </div>
               <div className="border border-gray-500 rounded-md p-5 flex-1">
-                <img src={Project3} className="w-full h-auto" />
+                <img src={Project2} className="w-full h-[13rem]" />
                 <h3 className="text-2xl font-semibold mt-8">
                   Food Ordering App
                 </h3>
@@ -230,7 +227,7 @@ function App() {
             </div>
             <div className="flex flex-col sm:flex-row  gap-10 mt-11">
               <div className="border border-gray-500 rounded-md p-5 flex-1">
-                <img src={Project2} className="w-full h-auto" />
+                <img src={Project3} className="w-full h-[13rem]" />
                 <h3 className="text-2xl font-semibold mt-8">ShaliniVirtual</h3>
                 <p className="text-gray-400 text-sm mt-2">
                   Designed and built ShaliniVirtuals with a dynamic
@@ -240,7 +237,7 @@ function App() {
                 </p>
                 <div className="flex gap-2 mt-12">
                   <button className="flex-1 text-sm py-3 bg-gradient-to-t from-blue-500 rounded-full to-cyan-500 hover:from-blue-700 hover:to-cyan-700">
-                    <a href="https://shalini-v.vercel.app/" target="_blank">
+                    <a href="https://shalinivirtuals1.netlify.app/" target="_blank">
                       Live preview
                     </a>
                   </button>
@@ -256,7 +253,7 @@ function App() {
               </div>
 
               <div className="border border-gray-500 rounded-md p-5 flex-1">
-                <img src={Project4} className="w-full h-auto " />
+                <img src={Project4} className="w-full h-[13rem] " />
                 <h3 className="text-2xl font-semibold mt-8">
                   Quiz-App
                 </h3>
