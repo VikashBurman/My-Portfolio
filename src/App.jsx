@@ -6,9 +6,42 @@ import Project3 from "./assets/project3.png";
 import Project4 from "./assets/project4.png";
 import ArrowDown from "./assets/arrow-down.svg";
 import { useEffect, useState } from "react";
+import { useRef } from "react";
+import emailjs from "@emailjs/browser";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
-  const [scrolling, setScrolling] = useState(false);
+  const form = useRef();
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+  const handleEmailChange = (event) => {
+    setEmail(event.target.value);
+  };
+  const handleMessageChange = (event) => {
+    setMessage(event.target.value);
+  };
+  const sendEmail = (e) => {
+    e.preventDefault();
+    setEmail('');
+    setMessage('');
+
+    emailjs
+      .sendForm("service_j6zv6qj", "template_bl7lmlm", form.current, {
+        publicKey: "qbvxNPegBL5NhgFg2",
+      })
+      .then(
+        () => {
+          console.log("MESSAGE SENT SUCCESFULLY");
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
+  };
+  const notify = () => toast("Message Sent Succesfully");
+
+  const [scrolling, setScrolling] = useState(false);  
 
   const onPageScroll = () => {
     if (window.pageYOffset > 200) {
@@ -91,7 +124,8 @@ function App() {
               <div className=" w-[80%]">
                 <p className="mt-4 text-gray-400  ">
                   Dedicated Web Enthusiast with a flair for Design and a love
-                  for Coding. Creative problem solver eager to contribute to dynamic projects and collaborative teams.
+                  for Coding. Creative problem solver eager to contribute to
+                  dynamic projects and collaborative teams.
                 </p>
                 <div className=" flex items-center  mt-5">
                   <button className="px-4 shadow-gray-500 shadow-md py-4 bg-gradient-to-t from-blue-500 rounded-full to-cyan-500 hover:from-blue-700 hover:to-cyan-700">
@@ -111,16 +145,16 @@ function App() {
                           target="_blank"
                         >
                           <svg
-                            class="w-9 h-9  text-white bg-gradient-to-t from-blue-500 rounded-full to-cyan-500  hover:from-blue-700 hover:to-cyan-700 "
+                            className="w-9 h-9  text-white bg-gradient-to-t from-blue-500 rounded-full to-cyan-500  hover:from-blue-700 hover:to-cyan-700 "
                             aria-hidden="true"
                             xmlns="http://www.w3.org/2000/svg"
                             fill="currentColor"
                             viewBox="0 0 24 24"
                           >
                             <path
-                              fill-rule="evenodd"
+                              fillRule="evenodd"
                               d="M12 2c-2.4 0-4.7.9-6.5 2.4a10.5 10.5 0 0 0-2 13.1A10 10 0 0 0 8.7 22c.5 0 .7-.2.7-.5v-2c-2.8.7-3.4-1.1-3.4-1.1-.1-.6-.5-1.2-1-1.5-1-.7 0-.7 0-.7a2 2 0 0 1 1.5 1.1 2.2 2.2 0 0 0 1.3 1 2 2 0 0 0 1.6-.1c0-.6.3-1 .7-1.4-2.2-.3-4.6-1.2-4.6-5 0-1.1.4-2 1-2.8a4 4 0 0 1 .2-2.7s.8-.3 2.7 1c1.6-.5 3.4-.5 5 0 2-1.3 2.8-1 2.8-1 .3.8.4 1.8 0 2.7a4 4 0 0 1 1 2.7c0 4-2.3 4.8-4.5 5a2.5 2.5 0 0 1 .7 2v2.8c0 .3.2.6.7.5a10 10 0 0 0 5.4-4.4 10.5 10.5 0 0 0-2.1-13.2A9.8 9.8 0 0 0 12 2Z"
-                              clip-rule="evenodd"
+                              clipRule="evenodd"
                             />
                           </svg>
                         </a>
@@ -131,16 +165,16 @@ function App() {
                           target="_blank"
                         >
                           <svg
-                            class="w-9 h-9 text-white bg-gradient-to-t from-blue-500 rounded-full to-cyan-500 hover:from-blue-700 hover:to-cyan-700"
+                            className="w-9 h-9 text-white bg-gradient-to-t from-blue-500 rounded-full to-cyan-500 hover:from-blue-700 hover:to-cyan-700"
                             aria-hidden="true"
                             xmlns="http://www.w3.org/2000/svg"
                             fill="currentColor"
                             viewBox="0 0 24 24"
                           >
                             <path
-                              fill-rule="evenodd"
+                              fillRule="evenodd"
                               d="M12.5 8.8v1.7a3.7 3.7 0 0 1 3.3-1.7c3.5 0 4.2 2.2 4.2 5v5.7h-3.2v-5c0-1.3-.2-2.8-2.1-2.8-1.9 0-2.2 1.3-2.2 2.6v5.2H9.3V8.8h3.2ZM7.2 6.1a1.6 1.6 0 0 1-2 1.6 1.6 1.6 0 0 1-1-2.2A1.6 1.6 0 0 1 6.6 5c.3.3.5.7.5 1.1Z"
-                              clip-rule="evenodd"
+                              clipRule="evenodd"
                             />
                             <path d="M7.2 8.8H4v10.7h3.2V8.8Z" />
                           </svg>
@@ -175,17 +209,13 @@ function App() {
                   well-rounded MERN stack application.
                 </p>
                 <div className="flex mt-12 gap-2">
-                
                   <button className="flex-1 text-sm py-3 bg-gradient-to-t from-blue-500 rounded-full to-cyan-500 hover:from-blue-700 hover:to-cyan-700">
-                  <a
-                      href="https://www.mockmasters.live/"
-                      target="_blank"
-                    >
+                    <a href="https://www.mockmasters.live/" target="_blank">
                       Live preview
                     </a>
                   </button>
                   <button className="flex-1 text-sm py-3 border rounded-full hover:border-blue-500 hover:text-blue-500">
-                  <a
+                    <a
                       href="https://github.com/VikashBurman/MockMasters-Frontend/tree/main"
                       target="_blank"
                     >
@@ -237,7 +267,10 @@ function App() {
                 </p>
                 <div className="flex gap-2 mt-12">
                   <button className="flex-1 text-sm py-3 bg-gradient-to-t from-blue-500 rounded-full to-cyan-500 hover:from-blue-700 hover:to-cyan-700">
-                    <a href="https://shalinivirtuals1.netlify.app/" target="_blank">
+                    <a
+                      href="https://shalinivirtuals1.netlify.app/"
+                      target="_blank"
+                    >
                       Live preview
                     </a>
                   </button>
@@ -254,21 +287,24 @@ function App() {
 
               <div className="border border-gray-500 rounded-md p-5 flex-1">
                 <img src={Project4} className="w-full h-[13rem] " />
-                <h3 className="text-2xl font-semibold mt-8">
-                  Quiz-App
-                </h3>
+                <h3 className="text-2xl font-semibold mt-8">Quiz-App</h3>
                 <p className="text-gray-400 text-sm mt-2">
-                Created a responsive quiz app with HTML, CSS, and JavaScript, ensuring dynamic content loading, scoring functionality, and an intuitive user interface.
+                  Created a responsive quiz app with HTML, CSS, and JavaScript,
+                  ensuring dynamic content loading, scoring functionality, and
+                  an intuitive user interface.
                 </p>
                 <div className="flex gap-2 mt-12">
                   <button className="flex-1 text-sm py-3 bg-gradient-to-t from-blue-500 rounded-full to-cyan-500 hover:from-blue-700 hover:to-cyan-700">
-                  <a href="https://quzify.netlify.app/" target="_blank">
+                    <a href="https://quzify.netlify.app/" target="_blank">
                       Live preview
                     </a>
                   </button>
                   <button className="flex-1 text-sm py-3 border rounded-full hover:border-blue-500 hover:text-blue-500">
-                  <a href="https://github.com/VikashBurman/Quiz-App" target="_blank">
-                     Checkout github
+                    <a
+                      href="https://github.com/VikashBurman/Quiz-App"
+                      target="_blank"
+                    >
+                      Checkout github
                     </a>
                   </button>
                 </div>
@@ -345,11 +381,7 @@ function App() {
                   Git/Github
                 </p>
               </div>
-              <div>
-                <p className="font-bold before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:block before:rounded-full before:mt-1 before:-left-6 before:absolute relative left-5">
-                  Wordpress
-                </p>
-              </div>
+        
               <div>
                 <p className="font-bold before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:block before:rounded-full before:mt-1 before:-left-6 before:absolute relative left-5">
                   OOPs
@@ -369,7 +401,7 @@ function App() {
               </div>
               <div>
                 <p className="font-bold before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:block before:rounded-full before:mt-1 before:-left-6 before:absolute relative left-5">
-                  Linux
+                  MongoDB
                 </p>
               </div>
               {/* <div>
@@ -412,34 +444,43 @@ function App() {
       </main>
       <footer id="contact">
         <div className="container mt-20 flex items-center justify-center px-4 py-6 ">
-          <div class="py-8 lg:py-4 px-4 mx-auto max-w-screen-sm border border-white rounded-lg ">
-            <h2 class="mb-3 text-3xl tracking-tight font-normal text-center">
+          <div className="py-8 lg:py-4 px-4 mx-auto max-w-screen-sm border border-white rounded-lg ">
+            <h2 className="mb-3 text-3xl tracking-tight font-normal text-center">
               Contact Me
             </h2>
-            <p class="mb-8 lg:mb-8 font-light text-center sm:text-xl">
+            <p className="mb-8 lg:mb-8 font-light text-center sm:text-xl">
               Please contact me at vikasburman37@gmail.com or through this form.
             </p>
-            <form action="#" class="space-y-8">
+            <form action="#" ref={form} onSubmit={sendEmail} className="space-y-8">
               <div>
-                {/* <label for="email" class="block mb-2 text-sm font-medium">Your email</label> */}
+                {/* <label for="email" className="block mb-2 text-sm font-medium">Your email</label> */}
                 <input
                   type="email"
+                  name="user_email"
+                  value={email}
                   id="email"
-                  class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 "
+                  onChange={handleEmailChange}
+                  className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg  block w-full p-2.5 "
                   placeholder="Your Email "
                   required
                 />
               </div>
-              <div class="sm:col-span-2">
-                {/* <label for="message" class="block mb-2 text-sm font-medium ">Your message</label> */}
+              <div className="sm:col-span-2">
+                {/* <label for="message" className="block mb-2 text-sm font-medium ">Your message</label> */}
                 <textarea
                   id="message"
+                  name="message"
+                  value={message}
+                  onChange={handleMessageChange}
                   rows="6"
-                  class="block p-2.5 w-full text-sm text-gray-900 rounded-lg border focus:ring-blue-500 focus:border-blue-500 "
+                  className="block p-2.5 w-full text-sm text-gray-900 rounded-lg border  "
                   placeholder="Your Message"
                 ></textarea>
               </div>
-              <button className="flex-1 text-sm py-3 px-7 bg-gradient-to-t from-blue-500 rounded-full to-cyan-500 hover:from-blue-700 hover:to-cyan-700">
+              <button
+                onClick={notify}
+                className="flex-1 text-sm py-3 px-7 bg-gradient-to-t from-blue-500 rounded-full to-cyan-500 hover:from-blue-700 hover:to-cyan-700"
+              >
                 Send Message
               </button>
             </form>
@@ -451,6 +492,19 @@ function App() {
             @2024 VikashBurman. All rights reserved.
           </p>
         </div>
+        <ToastContainer
+          position="bottom-right"
+          autoClose={2000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="light"
+          transition:Bounce
+        />
       </footer>
       {scrolling && (
         <button
