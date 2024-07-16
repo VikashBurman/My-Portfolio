@@ -1,9 +1,9 @@
 import "./App.css";
 import Porfile from "./assets/profilepic.jpg";
-import Project1 from "./assets/project1.png";
-import Project2 from "./assets/project2.png";
-import Project3 from "./assets/project3.png";
-import Project4 from "./assets/project4.png";
+import Project2 from "./assets/project2.webp";
+import Project1 from "./assets/project1.webp";
+import Project3 from "./assets/project3.webp";
+import Project4 from "./assets/project4.webp";
 import ArrowDown from "./assets/arrow-down.svg";
 import { useEffect, useState } from "react";
 import { useRef } from "react";
@@ -15,6 +15,7 @@ function App() {
   const form = useRef();
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  
   const handleEmailChange = (event) => {
     setEmail(event.target.value);
   };
@@ -130,7 +131,7 @@ function App() {
                 <div className=" flex items-center  mt-5">
                   <button className="px-4 shadow-gray-500 shadow-md py-4 bg-gradient-to-t from-blue-500 rounded-full to-cyan-500 hover:from-blue-700 hover:to-cyan-700">
                     <a
-                      href="https://drive.google.com/file/d/1YLb2V_R5xmeP_ibQQIjE6cPYQj2h4H4q/view?usp=sharing"
+                      href="https://drive.google.com/file/d/1AeMSCBkn6sVEe7WihjlDMId1Kg32l-Qg/view?usp=sharing"
                       target="_blank"
                     >
                       Download resume
@@ -268,7 +269,7 @@ function App() {
                 <div className="flex gap-2 mt-12">
                   <button className="flex-1 text-sm py-3 bg-gradient-to-t from-blue-500 rounded-full to-cyan-500 hover:from-blue-700 hover:to-cyan-700">
                     <a
-                      href="https://shalinivirtuals1.netlify.app/"
+                      href="https://www.shalinivirtuals.com/"
                       target="_blank"
                     >
                       Live preview
@@ -287,11 +288,10 @@ function App() {
 
               <div className="border border-gray-500 rounded-md p-5 flex-1">
                 <img src={Project4} className="w-full h-[13rem] " />
-                <h3 className="text-2xl font-semibold mt-8">Quiz-App</h3>
+                <h3 className="text-2xl font-semibold mt-8">BlogApp</h3>
                 <p className="text-gray-400 text-sm mt-2">
-                  Created a responsive quiz app with HTML, CSS, and JavaScript,
-                  ensuring dynamic content loading, scoring functionality, and
-                  an intuitive user interface.
+                Built BlogPost, a dynamic blogging web application where users can read, write, and edit posts, featuring a user
+                friendly interface for content creation and management.  
                 </p>
                 <div className="flex gap-2 mt-12">
                   <button className="flex-1 text-sm py-3 bg-gradient-to-t from-blue-500 rounded-full to-cyan-500 hover:from-blue-700 hover:to-cyan-700">
