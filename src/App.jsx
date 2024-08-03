@@ -8,14 +8,14 @@ import ArrowDown from "./assets/arrow-down.svg";
 import { useEffect, useState } from "react";
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer, toast ,Bounce} from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   const form = useRef();
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
-  
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
   const handleEmailChange = (event) => {
     setEmail(event.target.value);
   };
@@ -24,8 +24,20 @@ function App() {
   };
   const sendEmail = (e) => {
     e.preventDefault();
-    setEmail('');
-    setMessage('');
+    if (message.length < 10){
+      toast.error('Message is Too Short', {
+position: "bottom-right",
+autoClose: 1000,
+hideProgressBar: false,
+closeOnClick: true,
+pauseOnHover: true,
+draggable: true,
+progress: undefined,
+theme: "light",
+transition: Bounce,
+});
+      return;
+    }
 
     emailjs
       .sendForm("service_j6zv6qj", "template_bl7lmlm", form.current, {
@@ -34,6 +46,9 @@ function App() {
       .then(
         () => {
           console.log("MESSAGE SENT SUCCESFULLY");
+          setEmail("");
+          setMessage("");
+          notify();
         },
         (error) => {
           console.log("FAILED...", error.text);
@@ -42,7 +57,7 @@ function App() {
   };
   const notify = () => toast("Message Sent Succesfully");
 
-  const [scrolling, setScrolling] = useState(false);  
+  const [scrolling, setScrolling] = useState(false);
 
   const onPageScroll = () => {
     if (window.pageYOffset > 200) {
@@ -268,10 +283,7 @@ function App() {
                 </p>
                 <div className="flex gap-2 mt-12">
                   <button className="flex-1 text-sm py-3 bg-gradient-to-t from-blue-500 rounded-full to-cyan-500 hover:from-blue-700 hover:to-cyan-700">
-                    <a
-                      href="https://www.shalinivirtuals.com/"
-                      target="_blank"
-                    >
+                    <a href="https://www.shalinivirtuals.com/" target="_blank">
                       Live preview
                     </a>
                   </button>
@@ -290,8 +302,9 @@ function App() {
                 <img src={Project4} className="w-full h-[13rem] " />
                 <h3 className="text-2xl font-semibold mt-8">BlogApp</h3>
                 <p className="text-gray-400 text-sm mt-2">
-                Built BlogPost, a dynamic blogging web application where users can read, write, and edit posts, featuring a user
-                friendly interface for content creation and management.  
+                  Built BlogPost, a dynamic blogging web application where users
+                  can read, write, and edit posts, featuring a user friendly
+                  interface for content creation and management.
                 </p>
                 <div className="flex gap-2 mt-12">
                   <button className="flex-1 text-sm py-3 bg-gradient-to-t from-blue-500 rounded-full to-cyan-500 hover:from-blue-700 hover:to-cyan-700">
@@ -381,7 +394,7 @@ function App() {
                   Git/Github
                 </p>
               </div>
-        
+
               <div>
                 <p className="font-bold before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:block before:rounded-full before:mt-1 before:-left-6 before:absolute relative left-5">
                   OOPs
@@ -451,7 +464,12 @@ function App() {
             <p className="mb-8 lg:mb-8 font-light text-center sm:text-xl">
               Please contact me at vikasburman37@gmail.com or through this form.
             </p>
-            <form action="#" ref={form} onSubmit={sendEmail} className="space-y-8">
+            <form
+              action="#"
+              ref={form}
+              onSubmit={sendEmail}
+              className="space-y-8"
+            >
               <div>
                 {/* <label for="email" className="block mb-2 text-sm font-medium">Your email</label> */}
                 <input
@@ -478,7 +496,7 @@ function App() {
                 ></textarea>
               </div>
               <button
-                onClick={notify}
+                // onClick={notify}
                 className="flex-1 text-sm py-3 px-7 bg-gradient-to-t from-blue-500 rounded-full to-cyan-500 hover:from-blue-700 hover:to-cyan-700"
               >
                 Send Message
