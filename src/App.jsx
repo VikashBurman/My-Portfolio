@@ -1,14 +1,14 @@
 import "./App.css";
 import Porfile from "./assets/profilepic.jpg";
-import Project2 from "./assets/project2.webp";
+import Project2 from "./assets/Project2.webp";
 import Project1 from "./assets/project1.webp";
 import Project3 from "./assets/project3.webp";
-import Project4 from "./assets/project4.webp";
+import Project4 from "./assets/Project4.webp";
 import ArrowDown from "./assets/arrow-down.svg";
 import { useEffect, useState } from "react";
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
-import { ToastContainer, toast ,Bounce} from "react-toastify";
+import { ToastContainer, toast, Bounce } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function App() {
@@ -24,18 +24,18 @@ function App() {
   };
   const sendEmail = (e) => {
     e.preventDefault();
-    if (message.length < 10){
-      toast.error('Message is Too Short', {
-position: "bottom-right",
-autoClose: 1000,
-hideProgressBar: false,
-closeOnClick: true,
-pauseOnHover: true,
-draggable: true,
-progress: undefined,
-theme: "light",
-transition: Bounce,
-});
+    if (message.length < 10) {
+      toast.error("Message is Too Short", {
+        position: "bottom-right",
+        autoClose: 1000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        transition: Bounce,
+      });
       return;
     }
 
