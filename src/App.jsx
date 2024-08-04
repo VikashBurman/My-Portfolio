@@ -1,5 +1,5 @@
 import "./App.css";
-import Porfile from "./assets/profilepic.jpg";
+import Porfile from "./assets/profilepic.webp";
 import Project2 from "./assets/Project2.webp";
 import Project1 from "./assets/project1.webp";
 import Project3 from "./assets/project3.webp";
@@ -24,7 +24,7 @@ function App() {
   };
   const sendEmail = (e) => {
     e.preventDefault();
-    if (message.length < 10) {
+    if (message.length < 7) {
       toast.error("Message is Too Short", {
         position: "bottom-right",
         autoClose: 1000,
@@ -82,10 +82,13 @@ function App() {
         }  fixed left-0 right-0 top-0 z-20 bg-black`}
         id="home"
       >
-        <div className="container m-auto  px-4 py-6 max-w-5xl bg-black\ ">
+      
+        <div className="container m-auto  px-4 py-6 max-w-5xl bg-black max-sm:py-4  ">
           <div className="flex flex-col gap-4 sm:flex-row justify-between items-center">
             <div>
-              <h1 className="font-bold text-2xl">Vikash Burman</h1>
+            <a href="#">
+              <h1 className="font-bold text-2xl max-sm:hidden">VikashBurman</h1>
+              </a>
             </div>
             <div>
               <ul className="flex gap-5">
@@ -131,27 +134,30 @@ function App() {
         <section>
           <div className="container  px-4 pt-12 pb-12 sm:pt-20 flex flex-col sm:flex-row gap-6 text-center sm:text-left  ">
             <div>
-              <h2 className="font-bold text-4xl">Hello, I'm Vikash Burman</h2>
+              <h2 className="font-bold text-4xl max-sm:text-3xl">Hello, I'm Vikash Burman</h2>
               <div className="w-max">
-                <h2 className="font-bold text-3xl mt-1 gradiant-text">
+                <h2 className="font-bold max-sm:hidden text-3xl max-sm:text-2xl mt-1 gradiant-text">
                   MERN Stack Developer
                 </h2>
               </div>
-              <div className=" w-[80%]">
-                <p className="mt-4 text-gray-400  ">
+              <div>
+                <p className="mt-4 text-gray-400 ">
                   Dedicated Web Enthusiast with a flair for Design and a love
                   for Coding. Creative problem solver eager to contribute to
                   dynamic projects and collaborative teams.
                 </p>
-                <div className=" flex items-center  mt-5">
-                  <button className="px-4 shadow-gray-500 shadow-md py-4 bg-gradient-to-t from-blue-500 rounded-full to-cyan-500 hover:from-blue-700 hover:to-cyan-700">
-                    <a
+    
+                <div className=" flex items-center max-sm:justify-center mt-5">
+                <a
                       href="https://drive.google.com/file/d/1AeMSCBkn6sVEe7WihjlDMId1Kg32l-Qg/view?usp=sharing"
                       target="_blank"
                     >
+                  <button className="px-4 shadow-gray-500 shadow-md py-4 bg-gradient-to-t from-blue-500 rounded-full to-cyan-500 hover:from-blue-700 hover:to-cyan-700">
+                   
                       Download resume
-                    </a>
+                   
                   </button>
+                  </a>
 
                   <div className="ml-6">
                     <ul className="flex gap-4 ">
@@ -332,17 +338,17 @@ function App() {
             <div className="mt-14">
               <div>
                 <div className="flex justify-between items-center">
-                  <h2 className="font-semibold">HTML</h2>
+                  <h2 className="font-semibold">C/C++</h2>
                   <p className="text-gray-500">Advanced</p>
                 </div>
                 <span className="w-full h-2 mt-2 bg-gradient-to-t from-blue-500 to-cyan-500 block rounded-md" />
               </div>
               <div className="mt-8">
                 <div className="flex justify-between items-center">
-                  <h2 className="font-semibold">Tailwind,Css & Bootstrap</h2>
-                  <p className="text-gray-500">Advanced</p>
+                  <h2 className="font-semibold">Java</h2>
+                  <p className="text-gray-500">Intermediate</p>
                 </div>
-                <span className="w-full h-2 mt-2 bg-gradient-to-t from-blue-500 to-cyan-500 block rounded-md" />
+                <span className="w-[70%] h-2 mt-2 bg-gradient-to-t from-blue-500 to-cyan-500 block rounded-md" />
               </div>
               <div className="mt-8">
                 <div className="flex justify-between items-center">
@@ -353,21 +359,15 @@ function App() {
               </div>
               <div className="mt-8">
                 <div className="flex justify-between items-center">
-                  <h2 className="font-semibold">React</h2>
-                  <p className="text-gray-500">Intermediate</p>
-                </div>
-                <span className="w-[70%] h-2 mt-2 bg-gradient-to-t from-blue-500 to-cyan-500 block rounded-md" />
-              </div>
-              <div className="mt-8">
-                <div className="flex justify-between items-center">
-                  <h2 className="font-semibold">C/C++</h2>
+                  <h2 className="font-semibold">HTML,Tailwind,Css & Bootstrap</h2>
                   <p className="text-gray-500">Advanced</p>
                 </div>
                 <span className="w-full h-2 mt-2 bg-gradient-to-t from-blue-500 to-cyan-500 block rounded-md" />
               </div>
+              
               <div className="mt-8">
                 <div className="flex justify-between items-center">
-                  <h2 className="font-semibold">Java</h2>
+                  <h2 className="font-semibold">React</h2>
                   <p className="text-gray-500">Intermediate</p>
                 </div>
                 <span className="w-[70%] h-2 mt-2 bg-gradient-to-t from-blue-500 to-cyan-500 block rounded-md" />
@@ -417,6 +417,11 @@ function App() {
                   MongoDB
                 </p>
               </div>
+              <div>
+                <p className="font-bold before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:block before:rounded-full before:mt-1 before:-left-6 before:absolute relative left-5">
+                  Data Structures and Algorithms
+                </p>
+              </div>
               {/* <div>
                 <p className="font-bold before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:block before:rounded-full before:mt-1 before:-left-6 before:absolute relative left-5">
                   RWD
@@ -436,13 +441,18 @@ function App() {
               </div>
               <div className="pl-24 mt-24 relative before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:absolute before:rounded-full before:left-[58px]">
                 <h3 className="absolute left-0 text-lg font-semibold">2021</h3>
-                <p>Bachelor of Computer Application(BCA)</p>
+                <p>Bachelor of Computer Application (BCA)</p>
                 <p>Kurukshetra University, Kurukshetra</p>
               </div>
               <div className="pl-24 mt-24 relative before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:absolute before:rounded-full before:left-[58px]">
                 <h3 className="absolute left-0 text-lg font-semibold">2018</h3>
-                <p>Higher Secondary Education(12th)</p>
-                <p>SMB Gita Sr. Sec. School</p>
+                <p>Higher Secondary Education (12th)</p>
+                <p>SMB Gita Sr. Sec. School,Kurukshetra</p>
+              </div>
+              <div className="pl-24 mt-24 relative before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:absolute before:rounded-full before:left-[58px]">
+                <h3 className="absolute left-0 text-lg font-semibold">2016</h3>
+                <p> Secondary Education (10th)</p>
+                <p>MNB Gita Niketan Vidya Mandir, Kurukshetra</p>
               </div>
               {/* <div className="pl-24 mt-24 relative before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:absolute before:rounded-full before:left-[58px]">
                 <h3 className="absolute left-0 text-lg font-semibold">2015</h3>
@@ -457,8 +467,8 @@ function App() {
       </main>
       <footer id="contact">
         <div className="container mt-20 flex items-center justify-center px-4 py-6 ">
-          <div className="py-8 lg:py-4 px-4 mx-auto max-w-screen-sm border border-white rounded-lg ">
-            <h2 className="mb-3 text-3xl tracking-tight font-normal text-center">
+          <div className="py-8 lg:py-4 max-sm:py-4 px-4 mx-auto max-w-screen-sm border border-white rounded-lg ">
+            <h2 className="mb-3 text-3xl max-sm:text-2xl tracking-tight font-normal text-center">
               Contact Me
             </h2>
             <p className="mb-8 lg:mb-8 font-light text-center sm:text-xl">
