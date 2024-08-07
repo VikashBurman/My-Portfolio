@@ -314,13 +314,13 @@ function App() {
                 </p>
                 <div className="flex gap-2 mt-12">
                   <button className="flex-1 text-sm py-3 bg-gradient-to-t from-blue-500 rounded-full to-cyan-500 hover:from-blue-700 hover:to-cyan-700">
-                    <a href="https://quzify.netlify.app/" target="_blank">
+                    <a href="https://github.com/VikashBurman/BlogApp" target="_blank">
                       Live preview
                     </a>
                   </button>
                   <button className="flex-1 text-sm py-3 border rounded-full hover:border-blue-500 hover:text-blue-500">
                     <a
-                      href="https://github.com/VikashBurman/Quiz-App"
+                      href="https://github.com/VikashBurman/BlogApp"
                       target="_blank"
                     >
                       Checkout github
@@ -394,7 +394,6 @@ function App() {
                   Git/Github
                 </p>
               </div>
-
               <div>
                 <p className="font-bold before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:block before:rounded-full before:mt-1 before:-left-6 before:absolute relative left-5">
                   OOPs
@@ -405,6 +404,9 @@ function App() {
                   Express.js
                 </p>
               </div>
+              <p className="font-bold before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:block before:rounded-full before:mt-1 before:-left-6 before:absolute relative left-5">
+                 Programming
+                </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-36 mt-4 sm:mt-6 w-[80%]">
               <div>
@@ -417,16 +419,10 @@ function App() {
                   MongoDB
                 </p>
               </div>
+
               <div>
-                <p className="font-bold before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:block before:rounded-full before:mt-1 before:-left-6 before:absolute relative left-5">
-                  Data Structures and Algorithms
-                </p>
+                
               </div>
-              {/* <div>
-                <p className="font-bold before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:block before:rounded-full before:mt-1 before:-left-6 before:absolute relative left-5">
-                  RWD
-                </p>
-              </div> */}
             </div>
           </div>
         </section>
