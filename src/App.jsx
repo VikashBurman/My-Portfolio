@@ -142,9 +142,7 @@ function App() {
               </div>
               <div>
                 <p className="mt-4 text-gray-400 ">
-                  Dedicated Web Enthusiast with a flair for Design and a love
-                  for Coding. Creative problem solver eager to contribute to
-                  dynamic projects and collaborative teams.
+                Passionate about coding and creation, I’ve developed full-stack applications and honed my programming skills across multiple platforms and languages.
                 </p>
     
                 <div className=" flex items-center max-sm:justify-center mt-5">
