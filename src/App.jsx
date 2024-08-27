@@ -82,12 +82,13 @@ function App() {
         }  fixed left-0 right-0 top-0 z-20 bg-black`}
         id="home"
       >
-      
         <div className="container m-auto  px-4 py-6 max-w-5xl bg-black max-sm:py-4  ">
           <div className="flex flex-col gap-4 sm:flex-row justify-between items-center">
             <div>
-            <a href="#">
-              <h1 className="font-bold text-2xl max-sm:hidden">VikashBurman</h1>
+              <a href="#">
+                <h1 className="font-bold text-2xl max-sm:hidden">
+                  VikashBurman
+                </h1>
               </a>
             </div>
             <div>
@@ -134,7 +135,9 @@ function App() {
         <section>
           <div className="container  px-4 pt-12 pb-12 sm:pt-20 flex flex-col sm:flex-row gap-6 text-center sm:text-left  ">
             <div>
-              <h2 className="font-bold text-4xl max-sm:text-3xl">Hello, I'm Vikash Burman</h2>
+              <h2 className="font-bold text-4xl max-sm:text-3xl">
+                Hello, I'm Vikash Burman
+              </h2>
               <div className="w-max">
                 <h2 className="font-bold max-sm:hidden text-3xl max-sm:text-2xl mt-1 gradiant-text">
                   MERN Stack Developer
@@ -142,19 +145,19 @@ function App() {
               </div>
               <div>
                 <p className="mt-4 text-gray-400 ">
-                Passionate about coding and creation, I’ve developed full-stack applications and honed my programming skills across multiple platforms and languages.
+                  Passionate about coding and creation, I’ve developed
+                  full-stack applications and honed my programming skills across
+                  multiple platforms and languages.
                 </p>
-    
+
                 <div className=" flex items-center max-sm:justify-center mt-5">
-                <a
-                      href="https://drive.google.com/file/d/1AeMSCBkn6sVEe7WihjlDMId1Kg32l-Qg/view?usp=sharing"
-                      target="_blank"
-                    >
-                  <button className="px-4 shadow-gray-500 shadow-md py-4 bg-gradient-to-t from-blue-500 rounded-full to-cyan-500 hover:from-blue-700 hover:to-cyan-700">
-                   
+                  <a
+                    href="https://drive.google.com/file/d/1AeMSCBkn6sVEe7WihjlDMId1Kg32l-Qg/view?usp=sharing"
+                    target="_blank"
+                  >
+                    <button className="px-4 shadow-gray-500 shadow-md py-4 bg-gradient-to-t from-blue-500 rounded-full to-cyan-500 hover:from-blue-700 hover:to-cyan-700">
                       Download resume
-                   
-                  </button>
+                    </button>
                   </a>
 
                   <div className="ml-6">
@@ -244,6 +247,61 @@ function App() {
                   </button>
                 </div>
               </div>
+              
+              <div className="border border-gray-500 rounded-md p-5 flex-1">
+                <img src={Project4} className="w-full h-[13rem] " />
+                <h3 className="text-2xl font-semibold mt-8">BlogApp</h3>
+                <p className="text-gray-400 text-sm mt-2">
+                  Built BlogPost, a dynamic blogging web application where users
+                  can read, write, and edit posts, featuring a user friendly
+                  interface for content creation and management.
+                </p>
+                <div className="flex gap-2 mt-12">
+                  <button className="flex-1 text-sm py-3 bg-gradient-to-t from-blue-500 rounded-full to-cyan-500 hover:from-blue-700 hover:to-cyan-700">
+                    <a
+                      href="https://dailybiz.vercel.app/"
+                      target="_blank"
+                    >
+                      Live preview
+                    </a>
+                  </button>
+                  <button className="flex-1 text-sm py-3 border rounded-full hover:border-blue-500 hover:text-blue-500">
+                    <a
+                      href="https://github.com/VikashBurman/DailyBiz"
+                      target="_blank"
+                    >
+                      Checkout github
+                    </a>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col sm:flex-row  gap-10 mt-11">
+              <div className="border border-gray-500 rounded-md p-5 flex-1">
+                <img src={Project3} className="w-full h-[13rem]" />
+                <h3 className="text-2xl font-semibold mt-8">ShaliniVirtuals</h3>
+                <p className="text-gray-400 text-sm mt-2">
+                  Designed and built ShaliniVirtuals with a dynamic
+                  React-powered front-end and an aesthetically pleasing user
+                  interface achieved through Tailwind CSS, elevating the overall
+                  user experience.
+                </p>
+                <div className="flex gap-2 mt-12">
+                  <button className="flex-1 text-sm py-3 bg-gradient-to-t from-blue-500 rounded-full to-cyan-500 hover:from-blue-700 hover:to-cyan-700">
+                    <a href="https://www.shalinivirtuals.com/" target="_blank">
+                      Live preview
+                    </a>
+                  </button>
+                  <button className="flex-1 text-sm py-3 border rounded-full hover:border-blue-500 hover:text-blue-500">
+                    <a
+                      href="https://github.com/VikashBurman/shaliniV"
+                      target="_blank"
+                    >
+                      Checkout github
+                    </a>
+                  </button>
+                </div>
+              </div>
               <div className="border border-gray-500 rounded-md p-5 flex-1">
                 <img src={Project2} className="w-full h-[13rem]" />
                 <h3 className="text-2xl font-semibold mt-8">
@@ -274,58 +332,7 @@ function App() {
                   </button>
                 </div>
               </div>
-            </div>
-            <div className="flex flex-col sm:flex-row  gap-10 mt-11">
-              <div className="border border-gray-500 rounded-md p-5 flex-1">
-                <img src={Project3} className="w-full h-[13rem]" />
-                <h3 className="text-2xl font-semibold mt-8">ShaliniVirtual</h3>
-                <p className="text-gray-400 text-sm mt-2">
-                  Designed and built ShaliniVirtuals with a dynamic
-                  React-powered front-end and an aesthetically pleasing user
-                  interface achieved through Tailwind CSS, elevating the overall
-                  user experience.
-                </p>
-                <div className="flex gap-2 mt-12">
-                  <button className="flex-1 text-sm py-3 bg-gradient-to-t from-blue-500 rounded-full to-cyan-500 hover:from-blue-700 hover:to-cyan-700">
-                    <a href="https://www.shalinivirtuals.com/" target="_blank">
-                      Live preview
-                    </a>
-                  </button>
-                  <button className="flex-1 text-sm py-3 border rounded-full hover:border-blue-500 hover:text-blue-500">
-                    <a
-                      href="https://github.com/VikashBurman/shaliniV"
-                      target="_blank"
-                    >
-                      Checkout github
-                    </a>
-                  </button>
-                </div>
-              </div>
-
-              <div className="border border-gray-500 rounded-md p-5 flex-1">
-                <img src={Project4} className="w-full h-[13rem] " />
-                <h3 className="text-2xl font-semibold mt-8">BlogApp</h3>
-                <p className="text-gray-400 text-sm mt-2">
-                  Built BlogPost, a dynamic blogging web application where users
-                  can read, write, and edit posts, featuring a user friendly
-                  interface for content creation and management.
-                </p>
-                <div className="flex gap-2 mt-12">
-                  <button className="flex-1 text-sm py-3 bg-gradient-to-t from-blue-500 rounded-full to-cyan-500 hover:from-blue-700 hover:to-cyan-700">
-                    <a href="https://github.com/VikashBurman/BlogApp" target="_blank">
-                      Live preview
-                    </a>
-                  </button>
-                  <button className="flex-1 text-sm py-3 border rounded-full hover:border-blue-500 hover:text-blue-500">
-                    <a
-                      href="https://github.com/VikashBurman/BlogApp"
-                      target="_blank"
-                    >
-                      Checkout github
-                    </a>
-                  </button>
-                </div>
-              </div>
+              
             </div>
           </div>
         </section>
@@ -357,12 +364,14 @@ function App() {
               </div>
               <div className="mt-8">
                 <div className="flex justify-between items-center">
-                  <h2 className="font-semibold">HTML,Tailwind,Css & Bootstrap</h2>
+                  <h2 className="font-semibold">
+                    HTML,Tailwind,Css & Bootstrap
+                  </h2>
                   <p className="text-gray-500">Advanced</p>
                 </div>
                 <span className="w-full h-2 mt-2 bg-gradient-to-t from-blue-500 to-cyan-500 block rounded-md" />
               </div>
-              
+
               <div className="mt-8">
                 <div className="flex justify-between items-center">
                   <h2 className="font-semibold">React</h2>
@@ -403,8 +412,8 @@ function App() {
                 </p>
               </div>
               <p className="font-bold before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:block before:rounded-full before:mt-1 before:-left-6 before:absolute relative left-5">
-                 Programming
-                </p>
+                Programming
+              </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-36 mt-4 sm:mt-6 w-[80%]">
               <div>
@@ -418,9 +427,7 @@ function App() {
                 </p>
               </div>
 
-              <div>
-                
-              </div>
+              <div></div>
             </div>
           </div>
         </section>
