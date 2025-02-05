@@ -140,7 +140,7 @@ function App() {
               </h2>
               <div className="w-max">
                 <h2 className="font-bold max-sm:hidden text-3xl max-sm:text-2xl mt-1 gradiant-text">
-                  MERN Stack Developer
+                  Full Stack Developer
                 </h2>
               </div>
               <div>
@@ -227,9 +227,11 @@ function App() {
                 <img src={Project1} className="w-full h-[13rem]" />
                 <h3 className="text-2xl font-semibold mt-8">MockMasters</h3>
                 <p className="text-gray-400 text-sm mt-2">
-                  Developed Mockmasters with MongoDB, Express.js, React, and
-                  Node.js, incorporating additional technologies for a
-                  well-rounded MERN stack application.
+                  MockMasters is a full-stack exam preparation platform designed
+                  to help students prepare for NIMCET and core subjects. Built
+                  with React, Node.js, and MongoDB, it features a user-friendly
+                  interface for practicing mock exams, tracking progress, and
+                  enhancing learning with real-time performance analytics.
                 </p>
                 <div className="flex mt-12 gap-2">
                   <button className="flex-1 text-sm py-3 bg-gradient-to-t from-blue-500 rounded-full to-cyan-500 hover:from-blue-700 hover:to-cyan-700">
@@ -247,21 +249,20 @@ function App() {
                   </button>
                 </div>
               </div>
-              
+
               <div className="border border-gray-500 rounded-md p-5 flex-1">
                 <img src={Project4} className="w-full h-[13rem] " />
-                <h3 className="text-2xl font-semibold mt-8">BlogApp</h3>
+                <h3 className="text-2xl font-semibold mt-8">DailyBiz</h3>
                 <p className="text-gray-400 text-sm mt-2">
-                  Built BlogPost, a dynamic blogging web application where users
-                  can read, write, and edit posts, featuring a user friendly
-                  interface for content creation and management.
+                  DailyBiz is a dynamic content management platform that allows
+                  users to create, edit, and share personal articles with ease.
+                  Built using React, Node.js, and MongoDB, it features real-time
+                  text editing, file uploads, and a responsive design for
+                  seamless interaction across devices.
                 </p>
                 <div className="flex gap-2 mt-12">
                   <button className="flex-1 text-sm py-3 bg-gradient-to-t from-blue-500 rounded-full to-cyan-500 hover:from-blue-700 hover:to-cyan-700">
-                    <a
-                      href="https://dailybiz.vercel.app/"
-                      target="_blank"
-                    >
+                    <a href="https://dailybiz.vercel.app/" target="_blank">
                       Live preview
                     </a>
                   </button>
@@ -281,10 +282,11 @@ function App() {
                 <img src={Project3} className="w-full h-[13rem]" />
                 <h3 className="text-2xl font-semibold mt-8">ShaliniVirtuals</h3>
                 <p className="text-gray-400 text-sm mt-2">
-                  Designed and built ShaliniVirtuals with a dynamic
-                  React-powered front-end and an aesthetically pleasing user
-                  interface achieved through Tailwind CSS, elevating the overall
-                  user experience.
+                  ShaliniVirtuals is a modern recruitment agency website built
+                  with Next.js, replacing the outdated version with a more
+                  intuitive and responsive design. The site provides a smooth
+                  user experience for job seekers and employers, featuring job
+                  listings, applications, and seamless navigation.
                 </p>
                 <div className="flex gap-2 mt-12">
                   <button className="flex-1 text-sm py-3 bg-gradient-to-t from-blue-500 rounded-full to-cyan-500 hover:from-blue-700 hover:to-cyan-700">
@@ -332,12 +334,11 @@ function App() {
                   </button>
                 </div>
               </div>
-              
             </div>
           </div>
         </section>
-        {/* Technoglies section */}
-        <section className="py-10" id="technologies">
+
+        {/* <section className="py-10" id="technologies">
           <div className="container m-auto px-4">
             <h2 className="text-2xl font-semibold">Skills</h2>
             <div className="mt-14">
@@ -388,61 +389,89 @@ function App() {
               </div>
             </div>
           </div>
-        </section>
-        {/* Additional skills section */}
+        </section> */}
+
         <section>
           <div className="container m-auto px-4 py-14">
-            <h2 className="text-2xl font-semibold">
-              Additional technologies and skills
-            </h2>
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-28 mt-12 w-[80%]">
-              <div>
-                <p className="font-bold before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:block before:rounded-full before:mt-1 before:-left-6 before:absolute relative left-5">
-                  Git/Github
+            <h2 className="text-2xl font-semibold">Technologies and skills</h2>
+            <div className="flex flex-wrap gap-4 sm:gap-8 mt-12 w-full sm:w-[80%]">
+              <div class="w-1/2 sm:w-1/6 flex items-center">
+                <p class="font-bold flex items-center gap-2 before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:block before:rounded-full">
+                  C/C++
                 </p>
               </div>
-              <div>
-                <p className="font-bold before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:block before:rounded-full before:mt-1 before:-left-6 before:absolute relative left-5">
-                  OOPs
+              <div class="w-1/2 sm:w-1/6 flex items-center">
+                <p class="font-bold flex items-center gap-2 before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:block before:rounded-full">
+                  Java
                 </p>
               </div>
-              <div>
-                <p className="font-bold before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:block before:rounded-full before:mt-1 before:-left-6 before:absolute relative left-5">
-                  Express.js
+              <div class="w-1/2 sm:w-1/6 flex items-center">
+                <p class="font-bold flex items-center gap-2 before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:block before:rounded-full">
+                  JavaScript
                 </p>
               </div>
-              <p className="font-bold before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:block before:rounded-full before:mt-1 before:-left-6 before:absolute relative left-5">
-                Programming
-              </p>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-36 mt-4 sm:mt-6 w-[80%]">
-              <div>
-                <p className="font-bold before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:block before:rounded-full before:mt-1 before:-left-6 before:absolute relative left-5">
-                  MySql
+              <div class="w-1/2 sm:w-1/6 flex items-center">
+                <p class="font-bold flex items-center gap-2 before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:block before:rounded-full">
+                  HTML/CSS
                 </p>
               </div>
-              <div>
-                <p className="font-bold before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:block before:rounded-full before:mt-1 before:-left-6 before:absolute relative left-5">
-                  MongoDB
+              <div class="w-1/2 sm:w-1/6 flex items-center">
+                <p class="font-bold flex items-center gap-2 before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:block before:rounded-full">
+                  Tailwind
+                </p>
+              </div>
+              <div class="w-1/2 sm:w-1/6 flex items-center">
+                <p class="font-bold flex items-center gap-2 before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:block before:rounded-full">
+                  Node.js
+                </p>
+              </div>
+              <div class="w-1/2 sm:w-1/6 flex items-center">
+                <p class="font-bold flex items-center gap-2 before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:block before:rounded-full">
+                  React.js
                 </p>
               </div>
 
-              <div></div>
+              <div class="w-1/2 sm:w-1/6 flex items-center">
+                <p class="font-bold flex items-center gap-2 before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:block before:rounded-full">
+                  Git
+                </p>
+              </div>
+              <div class="w-1/2 sm:w-1/6 flex items-center">
+                <p class="font-bold flex items-center gap-2 before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:block before:rounded-full">
+                  OOPs
+                </p>
+              </div>
+              <div class="w-1/2 sm:w-1/6 flex items-center">
+                <p class="font-bold flex items-center gap-2 before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:block before:rounded-full">
+                  Express.js
+                </p>
+              </div>
+              <div class="w-1/2 sm:w-1/6 flex items-center">
+                <p class="font-bold flex items-center gap-2 before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:block before:rounded-full">
+                  MySQL
+                </p>
+              </div>
+              <div class="w-1/2 sm:w-1/6 flex items-center">
+                <p class="font-bold flex items-center gap-2 before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:block before:rounded-full">
+                  MongoDB
+                </p>
+              </div>
             </div>
           </div>
         </section>
+
         <section className="py-8" id="about">
           <div className="container m-auto px-4 space-y-10">
             <h2 className="text-2xl font-semibold">Education</h2>
             <div className="mt-12 relative before:absolute before:top-0 before:left-16 before:rounded-full before:bottom-10 sm:before:bottom-2 before:w-1 before:bg-white">
               <div className="pl-24 relative before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:absolute before:rounded-full before:left-[58px]">
                 <h3 className="absolute left-0 text-lg font-semibold">2025</h3>
-                <p>Master of Computer Application (MCA)</p>
+                <p>Master of Computer Applications (MCA)</p>
                 <p>NIT Jamshedpur, Jharkhand</p>
               </div>
               <div className="pl-24 mt-24 relative before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:absolute before:rounded-full before:left-[58px]">
                 <h3 className="absolute left-0 text-lg font-semibold">2021</h3>
-                <p>Bachelor of Computer Application (BCA)</p>
+                <p>Bachelor of Computer Applications (BCA)</p>
                 <p>Kurukshetra University, Kurukshetra</p>
               </div>
               <div className="pl-24 mt-24 relative before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:absolute before:rounded-full before:left-[58px]">
