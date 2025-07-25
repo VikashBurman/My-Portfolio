@@ -12,25 +12,54 @@ body {
     @apply bg-gradient-to-t from-blue-500 to-cyan-500 text-transparent;
     overflow: hidden;
     border-right: 2px solid #fff;
-    animation: typing-text steps(50) 4s infinite, blink ease 0.3s infinite;
-    text-wrap: nowrap;
+    animation: typing-text 4s steps(50) infinite, blink 0.5s ease-in-out infinite alternate;
+    white-space: nowrap;
     display: inline-block;
-    width: max-content;
     width: 0;
 }
 
 @keyframes typing-text {
-    from {
-        width: 0%;
-    } 
-    to {
-        width: 350px;
+    0% {
+        width: 0;
+    }
+    50% {
+        width: 100%;
+        border-right: 2px solid #fff;
+    }
+    100% {
+        width: 100%;
+        border-right: 2px solid transparent;
     }
 }
 
-@keyframes typing-text {
-    to {
-        border-color: transparent;
+@keyframes blink {
+    0% {
+        border-right-color: #fff;
+    }
+    100% {
+        border-right-color: transparent;
     }
 }
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .gradiant-text {
+        animation: typing-text-mobile 4s steps(30) infinite, blink 0.5s ease-in-out infinite alternate;
+    }
+}
+
+@keyframes typing-text-mobile {
+    0% {
+        width: 0;
+    }
+    50% {
+        width: 100%;
+        border-right: 2px solid #fff;
+    }
+    100% {
+        width: 100%;
+        border-right: 2px solid transparent;
+    }
+}
+
 

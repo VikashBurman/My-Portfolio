@@ -41,7 +41,7 @@ function App() {
 
     emailjs
       .sendForm("service_j6zv6qj", "template_bl7lmlm", form.current, {
-        publicKey: "qbvxNPegBL5NhgFg2",
+        publicKey: "XWRkBGsohx-kAjZcw",
       })
       .then(
         () => {
@@ -87,12 +87,20 @@ function App() {
             <div>
               <a href="#">
                 <h1 className="font-bold text-2xl max-sm:hidden">
-                  VikashBurman
+                  &lt;Vikash /&gt;
                 </h1>
               </a>
             </div>
             <div>
               <ul className="flex gap-5">
+                <li>
+                  <a
+                    href="#experience"
+                    className="text-gray-400 hover:text-white cursor-pointer"
+                  >
+                    Experience
+                  </a>
+                </li>
                 <li>
                   <a
                     href="#projects"
@@ -103,7 +111,7 @@ function App() {
                 </li>
                 <li>
                   <a
-                    href="#technologies"
+                    href="#skills"
                     className="text-gray-400 hover:text-white cursor-pointer"
                   >
                     Skills
@@ -133,42 +141,40 @@ function App() {
       <main className="relative mt-28 ">
         {/* Intro/Banner section */}
         <section>
-          <div className="container  px-4 pt-12 pb-12 sm:pt-20 flex flex-col sm:flex-row gap-6 text-center sm:text-left  ">
-            <div>
+          <div className="container px-4 pt-12 pb-12 sm:pt-20 flex flex-col sm:flex-row gap-6 sm:gap-12 text-center sm:text-left items-center">
+            <div className="flex-1">
               <h2 className="font-bold text-4xl max-sm:text-3xl">
-                Hello, I'm Vikash Burman
+                Hello, I'm Vikash
               </h2>
-              <div className="w-max">
-                <h2 className="font-bold max-sm:hidden text-3xl max-sm:text-2xl mt-1 gradiant-text">
+              <div className="w-max mx-auto sm:mx-0">
+                <h2 className="font-bold text-3xl max-sm:text-2xl mt-1 gradiant-text">
                   Full Stack Developer
                 </h2>
               </div>
               <div>
-                <p className="mt-4 text-gray-400 ">
-                  Passionate about coding and creation, I’ve developed
-                  full-stack applications and honed my programming skills across
-                  multiple platforms and languages.
+                <p className="mt-4 text-gray-400 max-w-lg mx-auto sm:mx-0">
+                  Passionate about coding and creation, Crafting secure, scalable apps with clean code and real impact — from building robust APIs at GoTrust to launching projects like MockMasters.
                 </p>
 
-                <div className=" flex items-center max-sm:justify-center mt-5">
+                <div className="flex items-center justify-center sm:justify-start mt-5">
                   <a
-                    href="https://drive.google.com/file/d/1OU6P1dj8TatnkAThv5jKswLDWl70D0EM/view?usp=sharing"
+                    href="https://drive.google.com/file/d/1O1iDXsJkTsd_WEVsakMjacy3Lg_MFLzF/view?usp=sharing"
                     target="_blank"
                   >
-                    <button className="px-4 shadow-gray-500 shadow-md py-4 bg-gradient-to-t from-blue-500 rounded-full to-cyan-500 hover:from-blue-700 hover:to-cyan-700">
+                    <button className="px-6 py-3 shadow-gray-500 shadow-md bg-gradient-to-t from-blue-500 rounded-full to-cyan-500 hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">
                       Download resume
                     </button>
                   </a>
 
                   <div className="ml-6">
-                    <ul className="flex gap-4 ">
-                      <li className="">
+                    <ul className="flex gap-4">
+                      <li>
                         <a
                           href="https://github.com/VikashBurman"
                           target="_blank"
                         >
                           <svg
-                            className="w-9 h-9  text-white bg-gradient-to-t from-blue-500 rounded-full to-cyan-500  hover:from-blue-700 hover:to-cyan-700 "
+                            className="w-10 h-10 p-2 text-white bg-gradient-to-t from-blue-500 rounded-full to-cyan-500 hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
                             aria-hidden="true"
                             xmlns="http://www.w3.org/2000/svg"
                             fill="currentColor"
@@ -184,11 +190,11 @@ function App() {
                       </li>
                       <li>
                         <a
-                          href="https://www.linkedin.com/in/vikash-burman-33517824a/"
+                          href="https://www.linkedin.com/in/vikashburman/"
                           target="_blank"
                         >
                           <svg
-                            className="w-9 h-9 text-white bg-gradient-to-t from-blue-500 rounded-full to-cyan-500 hover:from-blue-700 hover:to-cyan-700"
+                            className="w-10 h-10 p-2 text-white bg-gradient-to-t from-blue-500 rounded-full to-cyan-500 hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
                             aria-hidden="true"
                             xmlns="http://www.w3.org/2000/svg"
                             fill="currentColor"
@@ -208,13 +214,37 @@ function App() {
                 </div>
               </div>
             </div>
-            <div className="relative">
-              {/* <div className="after:bg-[url('./large-long.png')] after:bg-contain after:block after:bg-no-repeat after:w-[420px] after:h-[320px] after:absolute after:top-0 after:-left-20 sm:after:-left-40 before:bg-[url('./small.png')] before:bg-contain before:block before:bg-no-repeat before:w-[220px] before:h-[220px] before:absolute before:bottom-0 before:-right-10"> */}
+            <div className="flex-shrink-0">
               <img
                 src={Porfile}
-                className="relative z-10 w-[280px] m-auto sm:w-[500px] rounded-full   "
+                className="w-[280px] h-[280px] sm:w-[400px] sm:h-[400px] rounded-full object-cover mx-auto"
               />
-              {/* </div> */}
+            </div>
+          </div>
+        </section>
+        {/* Experience section */}
+        <section id="experience">
+          <div className="container m-auto px-4 sm:py-10">
+            <h2 className="text-2xl font-semibold">Experience</h2>
+            <div className="mt-12 relative before:absolute before:top-0 before:left-16 before:rounded-full before:bottom-10 sm:before:bottom-2 before:w-1 before:bg-white">
+              <div className="pl-24 relative before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:absolute before:rounded-full before:left-[58px]">
+                <h3 className="absolute left-0 text-lg font-semibold">2025</h3>
+                <h4 className="text-xl font-semibold">Junior Software Developer</h4>
+                <p className="text-blue-400 mb-2">GoTrust • April 2025 - Present</p>
+                <ul className="text-gray-400 text-sm space-y-1">
+                  <li>• Developed secure RESTful APIs (Keycloak, PostgreSQL, Sequelize) for ROPA and Privacy Policy modules, implementing multi-level data management for 10+ departments, scalable audit logging for 1000+ users, and an intelligent auto-fill system to enhance compliance and operational efficiency.</li>
+                  <li>• Automated lifecycle and payroll tracking for 200+ employees via GoEms Employee Management System cron jobs; concurrently optimized 15+ backend APIs, reducing time complexity from O(n^3) to O(n) and O(n^2) to O(n), validated using JMeter/SigNoz.</li>
+                </ul>
+              </div>
+              <div className="pl-24 mt-16 relative before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:absolute before:rounded-full before:left-[58px]">
+                <h3 className="absolute left-0 text-lg font-semibold">2024</h3>
+                <h4 className="text-xl font-semibold">Full Stack Developer Intern</h4>
+                <p className="text-blue-400 mb-2">ShaliniVirtuals • Jun 2024 - Aug 2024</p>
+                <ul className="text-gray-400 text-sm space-y-1">
+                  <li>• Redesigned and developed company website using Next.js, migrating from HTML/CSS/JS/Bootstrap, resulting in 40% improved performance and user experience.</li>
+                  <li>• Implemented client testimonials section by integrating LinkedIn reviews to enhance credibility, user trust, and search engine visibility through SEO best practices.</li>
+                </ul>
+              </div>
             </div>
           </div>
         </section>
@@ -224,7 +254,7 @@ function App() {
             <h2 className="text-2xl font-semibold">Projects</h2>
             <div className="flex flex-col sm:flex-row gap-10 mt-11">
               <div className="border border-gray-500 rounded-md p-5 flex-1">
-                <img src={Project1} className="w-full h-[13rem]" />
+                <img src={Project1} className="w-full h-[13rem] object-cover" />
                 <h3 className="text-2xl font-semibold mt-8">MockMasters</h3>
                 <p className="text-gray-400 text-sm mt-2">
                   MockMasters is a full-stack exam preparation platform designed
@@ -233,9 +263,9 @@ function App() {
                   interface for practicing mock exams, tracking progress, and
                   enhancing learning with real-time performance analytics.
                 </p>
-                <div className="flex mt-12 gap-2">
+                <div className="flex gap-4 mt-12">
                   <button className="flex-1 text-sm py-3 bg-gradient-to-t from-blue-500 rounded-full to-cyan-500 hover:from-blue-700 hover:to-cyan-700">
-                    <a href="https://www.mockmasters.live/" target="_blank">
+                    <a href="https://mockmasters.vercel.app/" target="_blank">
                       Live preview
                     </a>
                   </button>
@@ -251,7 +281,7 @@ function App() {
               </div>
 
               <div className="border border-gray-500 rounded-md p-5 flex-1">
-                <img src={Project4} className="w-full h-[13rem] " />
+                <img src={Project4} className="w-full h-[13rem] object-cover" />
                 <h3 className="text-2xl font-semibold mt-8">DailyBiz</h3>
                 <p className="text-gray-400 text-sm mt-2">
                   DailyBiz is a dynamic content management platform that allows
@@ -260,7 +290,7 @@ function App() {
                   text editing, file uploads, and a responsive design for
                   seamless interaction across devices.
                 </p>
-                <div className="flex gap-2 mt-12">
+                <div className="flex gap-4 mt-12">
                   <button className="flex-1 text-sm py-3 bg-gradient-to-t from-blue-500 rounded-full to-cyan-500 hover:from-blue-700 hover:to-cyan-700">
                     <a href="https://dailybiz.vercel.app/" target="_blank">
                       Live preview
@@ -277,9 +307,10 @@ function App() {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col sm:flex-row  gap-10 mt-11">
+            
+            <div className="flex flex-col sm:flex-row gap-10 mt-11">
               <div className="border border-gray-500 rounded-md p-5 flex-1">
-                <img src={Project3} className="w-full h-[13rem]" />
+                <img src={Project3} className="w-full h-[13rem] object-cover" />
                 <h3 className="text-2xl font-semibold mt-8">ShaliniVirtuals</h3>
                 <p className="text-gray-400 text-sm mt-2">
                   ShaliniVirtuals is a modern recruitment agency website built
@@ -288,7 +319,7 @@ function App() {
                   user experience for job seekers and employers, featuring job
                   listings, applications, and seamless navigation.
                 </p>
-                <div className="flex gap-2 mt-12">
+                <div className="flex gap-4 mt-12">
                   <button className="flex-1 text-sm py-3 bg-gradient-to-t from-blue-500 rounded-full to-cyan-500 hover:from-blue-700 hover:to-cyan-700">
                     <a href="https://www.shalinivirtuals.com/" target="_blank">
                       Live preview
@@ -304,29 +335,25 @@ function App() {
                   </button>
                 </div>
               </div>
+              
               <div className="border border-gray-500 rounded-md p-5 flex-1">
-                <img src={Project2} className="w-full h-[13rem]" />
-                <h3 className="text-2xl font-semibold mt-8">
-                  Food Ordering App
-                </h3>
+                <img src={Project2} className="w-full h-[13rem] object-cover" />
+                <h3 className="text-2xl font-semibold mt-8">QuickMatch</h3>
                 <p className="text-gray-400 text-sm mt-2">
-                  Developed a React-based food ordering app with Firebase
-                  backend, CSS styling, and JavaScript functionality, ensuring a
-                  dynamic and user-friendly experience.
+                  QuickMatch is a dating app enabling users to send connection requests, accept/reject them, and engage with others through a dynamic feed. Built with MongoDB, Express, React, Node.js, and Redux, it features JWT authentication, API & schema validation, pagination, and efficient state management for a smooth user experience.
                 </p>
                 <div className="flex gap-4 mt-12">
                   <button className="flex-1 text-sm py-3 bg-gradient-to-t from-blue-500 rounded-full to-cyan-500 hover:from-blue-700 hover:to-cyan-700">
                     <a
-                      href="https://react-food-app-omega.vercel.app/"
+                      href="https://github.com/VikashBurman/QuickMatch-Backend"
                       target="_blank"
                     >
                       Live preview
                     </a>
                   </button>
-
                   <button className="flex-1 text-sm py-3 border rounded-full hover:border-blue-500 hover:text-blue-500">
                     <a
-                      href="https://github.com/VikashBurman/React-Food-App"
+                      href="https://github.com/VikashBurman/QuickMatch-Backend"
                       target="_blank"
                     >
                       Checkout github
@@ -391,7 +418,7 @@ function App() {
           </div>
         </section> */}
 
-        <section>
+        <section id="skills">
           <div className="container m-auto px-4 py-14">
             <h2 className="text-2xl font-semibold">Technologies and skills</h2>
             <div className="flex flex-wrap gap-4 sm:gap-8 mt-12 w-full sm:w-[80%]">
@@ -417,7 +444,22 @@ function App() {
               </div>
               <div class="w-1/2 sm:w-1/6 flex items-center">
                 <p class="font-bold flex items-center gap-2 before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:block before:rounded-full">
-                  Tailwind
+                  Tailwind CSS
+                </p>
+              </div>
+              <div class="w-1/2 sm:w-1/6 flex items-center">
+                <p class="font-bold flex items-center gap-2 before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:block before:rounded-full">
+                  React.js
+                </p>
+              </div>
+              <div class="w-1/2 sm:w-1/6 flex items-center">
+                <p class="font-bold flex items-center gap-2 before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:block before:rounded-full">
+                  Next.js
+                </p>
+              </div>
+              <div class="w-1/2 sm:w-1/6 flex items-center">
+                <p class="font-bold flex items-center gap-2 before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:block before:rounded-full">
+                  Redux
                 </p>
               </div>
               <div class="w-1/2 sm:w-1/6 flex items-center">
@@ -427,23 +469,12 @@ function App() {
               </div>
               <div class="w-1/2 sm:w-1/6 flex items-center">
                 <p class="font-bold flex items-center gap-2 before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:block before:rounded-full">
-                  React.js
-                </p>
-              </div>
-
-              <div class="w-1/2 sm:w-1/6 flex items-center">
-                <p class="font-bold flex items-center gap-2 before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:block before:rounded-full">
-                  Git
-                </p>
-              </div>
-              <div class="w-1/2 sm:w-1/6 flex items-center">
-                <p class="font-bold flex items-center gap-2 before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:block before:rounded-full">
-                  OOPs
-                </p>
-              </div>
-              <div class="w-1/2 sm:w-1/6 flex items-center">
-                <p class="font-bold flex items-center gap-2 before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:block before:rounded-full">
                   Express.js
+                </p>
+              </div>
+              <div class="w-1/2 sm:w-1/6 flex items-center">
+                <p class="font-bold flex items-center gap-2 before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:block before:rounded-full">
+                  MongoDB
                 </p>
               </div>
               <div class="w-1/2 sm:w-1/6 flex items-center">
@@ -453,7 +484,27 @@ function App() {
               </div>
               <div class="w-1/2 sm:w-1/6 flex items-center">
                 <p class="font-bold flex items-center gap-2 before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:block before:rounded-full">
-                  MongoDB
+                  PostgreSQL
+                </p>
+              </div>
+              <div class="w-1/2 sm:w-1/6 flex items-center">
+                <p class="font-bold flex items-center gap-2 before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:block before:rounded-full">
+                  RESTful API
+                </p>
+              </div>
+              <div class="w-1/2 sm:w-1/6 flex items-center">
+                <p class="font-bold flex items-center gap-2 before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:block before:rounded-full">
+                  Git/GitHub
+                </p>
+              </div>
+              <div class="w-1/2 sm:w-1/6 flex items-center">
+                <p class="font-bold flex items-center gap-2 before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:block before:rounded-full">
+                  Postman
+                </p>
+              </div>
+              <div class="w-1/2 sm:w-1/6 flex items-center">
+                <p class="font-bold flex items-center gap-2 before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:block before:rounded-full">
+                  JMeter
                 </p>
               </div>
             </div>
@@ -502,7 +553,7 @@ function App() {
               Contact Me
             </h2>
             <p className="mb-8 lg:mb-8 font-light text-center sm:text-xl">
-              Please contact me at vikasburman37@gmail.com or through this form.
+            Feel free to connect via vikashburman.info@gmail.com or submit your message using the contact form
             </p>
             <form
               action="#"
@@ -547,7 +598,7 @@ function App() {
         <div>
           <p className="text-gray-300 text-sm text-center mt-10 mb-5">
             {" "}
-            @2024 VikashBurman. All rights reserved.
+            @2025 Made by Vikash Burman.
           </p>
         </div>
         <ToastContainer
@@ -579,3 +630,10 @@ function App() {
 }
 
 export default App;
+
+
+
+
+
+
+
