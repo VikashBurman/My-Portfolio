@@ -160,9 +160,10 @@ function App() {
               </div>
               
               <p className="text-gray-400 max-w-lg mx-auto sm:mx-0 text-lg leading-relaxed mb-8">
-                Passionate about coding and creation, crafting secure, scalable apps with clean code and real impact — from building robust APIs at 
-                <span className=" font-medium"> GoTrust</span> to launching projects like 
-                <span className="font-medium"> MockMasters</span>.
+                Passionate about coding and creation, crafting secure, scalable apps with clean code and real impact.
+                {/* — from building robust APIs at  */}
+                {/* <span className=" font-medium"> GoTrust</span> to launching projects like 
+                <span className="font-medium"> MockMasters</span>. */}
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center sm:justify-start gap-6 mb-8">
@@ -254,7 +255,7 @@ function App() {
                   <div className="sm:ml-16 bg-gradient-to-br from-gray-900/50 to-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/10">
                     <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start mb-4">
                       <div className="flex-1">
-                        <h3 className="text-xl font-bold text-white mb-2">Junior Software Developer</h3>
+                        <h3 className="text-xl font-bold text-white mb-2">Backend Developer Intern</h3>
                         <p className="text-blue-400 font-semibold text-lg">GoTrust</p>
                       </div>
                       <div className="flex items-center gap-2 mt-2 lg:mt-0">
